@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-parchment-50 text-charcoal-800 font-sans;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ============================================================
+   COMPONENT LAYER
+   ============================================================ */
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-charcoal-800 text-parchment-50 
+           font-sans font-medium text-sm rounded-sm tracking-wide
+           hover:bg-charcoal-700 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-charcoal-800 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-charcoal-800 text-charcoal-800
+           font-sans font-medium text-sm rounded-sm tracking-wide
+           hover:bg-charcoal-800 hover:text-parchment-50 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-charcoal-800 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-charcoal-600
+           font-sans font-medium text-sm rounded-sm
+           hover:bg-charcoal-100 transition-colors duration-150
+           focus:outline-none focus:ring-2 focus:ring-charcoal-400;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-xs font-sans font-semibold tracking-[0.15em] uppercase text-gold-500;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply font-serif text-3xl md:text-4xl text-charcoal-900 leading-tight;
+  }
+
+  /* Card */
+  .art-card {
+    @apply bg-white border border-charcoal-100 rounded-sm overflow-hidden
+           hover:border-charcoal-300 hover:shadow-md transition-all duration-200;
+  }
+
+  /* Filter pill */
+  .filter-pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-sans font-medium
+           rounded-full border border-charcoal-200 bg-white text-charcoal-600
+           hover:border-charcoal-800 hover:text-charcoal-800 
+           transition-colors duration-150 cursor-pointer whitespace-nowrap;
+  }
+
+  .filter-pill.active {
+    @apply bg-charcoal-800 text-parchment-50 border-charcoal-800;
+  }
+
+  /* Scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-charcoal-100;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-charcoal-300 rounded-full;
+  }
+}
+
+/* ============================================================
+   LEAFLET MAP OVERRIDES
+   ============================================================ */
+
+/* Remove default Leaflet blue marker */
+.leaflet-marker-icon.leaflet-zoom-animated {
+  will-change: transform;
+}
+
+/* Map container */
+.map-wrapper .leaflet-container {
+  font-family: 'Inter', sans-serif;
+  background: #f8f5ef;
+}
+
+/* Custom marker */
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-marker:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.custom-marker-inner {
+  transform: rotate(45deg);
+  font-size: 12px;
+  line-height: 1;
+  color: white;
+}
+
+.custom-marker.selected {
+  box-shadow: 0 0 0 3px #d97706, 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip popup */
+.leaflet-popup-content-wrapper {
+  border-radius: 2px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid #e8e8e5;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+/* Hover tooltip (custom pane) */
+.art-tooltip {
+  background: #1c1c1a;
+  color: #f9eed8;
+  padding: 8px 12px;
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+/* Connection lines */
+.connection-line {
+  stroke-dasharray: 6 4;
+  stroke-opacity: 0.45;
+  animation: dashFlow 20s linear infinite;
+}
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -200; }
+}
+
+/* ============================================================
+   PANEL ANIMATIONS
+   ============================================================ */
+
+.panel-enter {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ============================================================
+   GALLERY LIGHTBOX
+   ============================================================ */
+
+.lightbox-overlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.timeline-period::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+/* ============================================================
+   SKELETON LOADER
+   ============================================================ */
+
+.skeleton {
+  @apply bg-charcoal-100 rounded animate-pulse;
+  background: linear-gradient(
+    90deg,
+    #e8e8e5 0%,
+    #f0ede8 40%,
+    #e8e8e5 80%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ============================================================
+   FOCUS STATES (accessibility)
+   ============================================================ */
+
+*:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+
+@media print {
+  .no-print { display: none !important; }
+  .map-wrapper { height: 400px !important; }
+}
