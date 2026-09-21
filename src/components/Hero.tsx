@@ -9,74 +9,68 @@ interface HeroProps {
   onDiscoverArtForms: () => void;
 }
 
-// India SVG silhouette path (simplified)
-const IndiaOutline = () => (
-  <svg
-    viewBox="0 0 300 380"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-    className="w-full h-full"
-  >
-    {/* Simplified India outline */}
-    <path
-      d="M 120 20 L 150 15 L 185 25 L 210 40 L 225 60 L 235 80 L 240 105 
-         L 245 125 L 255 140 L 265 155 L 268 175 L 260 195 L 250 210 
-         L 240 225 L 230 238 L 218 250 L 205 260 L 195 270 L 185 280 
-         L 175 292 L 165 305 L 155 318 L 148 330 L 143 318 L 135 305 
-         L 125 292 L 112 278 L 100 265 L 88 252 L 75 238 L 65 222 
-         L 55 205 L 48 188 L 45 170 L 48 150 L 55 133 L 65 118 
-         L 72 100 L 78 82 L 88 65 L 100 50 L 112 35 Z"
-      fill="url(#indiaGradient)"
-      fillOpacity="0.12"
-      stroke="#d08a30"
-      strokeWidth="1.5"
-      strokeOpacity="0.5"
-    />
-    {/* Decorative dot pattern */}
-    {[
-      [148, 70], [180, 85], [210, 120], [230, 155], [220, 195],
-      [195, 235], [165, 270], [130, 240], [95, 200], [70, 165],
-      [80, 125], [110, 90]
-    ].map(([cx, cy], i) => (
-      <circle
-        key={i}
-        cx={cx}
-        cy={cy}
-        r="3"
-        fill="#d97706"
-        fillOpacity="0.6"
-      />
-    ))}
-    {/* Connection lines */}
-    <line x1="148" y1="70" x2="180" y2="85" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.3" />
-    <line x1="180" y1="85" x2="210" y2="120" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.3" />
-    <line x1="210" y1="120" x2="230" y2="155" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.3" />
-    <line x1="230" y1="155" x2="220" y2="195" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.3" />
-    <line x1="220" y1="195" x2="195" y2="235" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.3" />
-    <line x1="148" y1="70" x2="130" y2="240" stroke="#d97706" strokeWidth="0.5" strokeOpacity="0.15" strokeDasharray="4 4" />
-    <defs>
-      <linearGradient id="indiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#d08a30" stopOpacity="0.8" />
-        <stop offset="100%" stopColor="#1e1b4b" stopOpacity="0.4" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
+// Constellation of the atlas's real locations, projected from latitude/longitude.
+const LAT_MIN = 6.5, LAT_MAX = 36, LNG_MIN = 67.5, LNG_MAX = 98;
+const VB_W = 300, VB_H = 340;
+
+const project = (lat: number, lng: number): [number, number] => [
+  12 + ((lng - LNG_MIN) / (LNG_MAX - LNG_MIN)) * (VB_W - 24),
+  12 + ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * (VB_H - 24),
+];
+
+const AtlasConstellation = () => {
+  const points = locations.map((l) => ({
+    id: l.id,
+    name: l.name,
+    xy: project(l.latitude, l.longitude),
+  }));
+  const byId = new Map(points.map((p) => [p.id, p]));
+  const links = new Set<string>();
+  locations.forEach((l) =>
+    l.relatedLocations.forEach((r) => {
+      if (byId.has(r)) links.add([l.id, r].sort().join('|'));
+    })
+  );
+
+  return (
+    <svg
+      viewBox={`0 0 ${VB_W} ${VB_H}`}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      className="w-full h-full"
+    >
+      {[...links].map((key) => {
+        const [a, b] = key.split('|').map((id) => byId.get(id)!);
+        return (
+          <line
+            key={key}
+            x1={a.xy[0]} y1={a.xy[1]} x2={b.xy[0]} y2={b.xy[1]}
+            stroke="#d97706" strokeWidth="0.6" strokeOpacity="0.35"
+          />
+        );
+      })}
+      {points.map((p, i) => (
+        <g key={p.id}>
+          <circle cx={p.xy[0]} cy={p.xy[1]} r="7" fill="#d97706" fillOpacity="0.12"
+            className="animate-pulse-slow" style={{ animationDelay: `${(i % 7) * 0.4}s` }} />
+          <circle cx={p.xy[0]} cy={p.xy[1]} r="2.8" fill="#b45309" />
+        </g>
+      ))}
+    </svg>
+  );
+};
 
 const Hero: React.FC<HeroProps> = ({ onExploreMap, onDiscoverArtForms }) => {
-  // Dynamic stats from actual dataset
-  const locationCount = locations.length;
-  const artTraditionCount = movements.length + 6; // movements + base art forms
-  const artistCount = artists.length;
-  const yearsOfHistory = 2500;
-
+  // Stats computed from the datasets — nothing hard-coded
+  const regionCount = new Set(locations.map((l) => l.region)).size;
   const stats = [
-    { value: `${locationCount}+`, label: 'Locations' },
-    { value: `${artTraditionCount}+`, label: 'Art Traditions' },
-    { value: `${artistCount * 10}+`, label: 'Artists & Artworks' },
-    { value: `${yearsOfHistory}+`, label: 'Years of History' },
+    { value: `${locations.length}`, label: 'Art Locations' },
+    { value: `${movements.length}`, label: 'Art Movements' },
+    { value: `${artists.length}`, label: 'Featured Artists' },
+    { value: `${regionCount}`, label: 'Regions' },
   ];
+  const locationCount = locations.length;
 
   return (
     <section
@@ -101,7 +95,7 @@ const Hero: React.FC<HeroProps> = ({ onExploreMap, onDiscoverArtForms }) => {
 
           {/* Left — Text content */}
           <div className="animate-fade-in">
-            <p className="section-label mb-4">College Assignment · CO1</p>
+            <p className="section-label mb-4">An interactive atlas · 2,500 years of art</p>
 
             <h1
               id="hero-heading"
@@ -147,18 +141,18 @@ const Hero: React.FC<HeroProps> = ({ onExploreMap, onDiscoverArtForms }) => {
             style={{ animationDelay: '0.2s' }}
             aria-hidden="true"
           >
-            <div className="relative w-72 h-96 lg:w-80 lg:h-[420px]">
-              <IndiaOutline />
+            <div className="relative w-72 h-80 lg:w-96 lg:h-[420px]">
+              <AtlasConstellation />
               {/* Floating label */}
               <div className="absolute top-4 right-0 bg-white/80 backdrop-blur-sm border border-charcoal-100 rounded-sm px-3 py-2 shadow-sm">
-                <p className="font-serif text-xs text-charcoal-500">Subcontinent</p>
+                <p className="font-serif text-xs text-charcoal-500">Plotted by coordinates</p>
                 <p className="font-sans text-sm font-semibold text-charcoal-800">
                   {locationCount} Art Centres
                 </p>
               </div>
               <div className="absolute bottom-8 left-0 bg-white/80 backdrop-blur-sm border border-charcoal-100 rounded-sm px-3 py-2 shadow-sm">
                 <p className="font-serif text-xs text-charcoal-500">Spanning</p>
-                <p className="font-sans text-sm font-semibold text-charcoal-800">6 Regions</p>
+                <p className="font-sans text-sm font-semibold text-charcoal-800">{regionCount} Regions</p>
               </div>
             </div>
           </div>

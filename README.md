@@ -8,7 +8,7 @@
 
 ## Overview
 
-Indian Art Atlas is an educational interactive web application exploring the geographic diversity of Indian art history. Built with React, TypeScript, Vite, and Tailwind CSS, it features an interactive Leaflet map of 25+ historically significant art locations across India.
+Indian Art Atlas is an educational interactive web application exploring the geographic diversity of Indian art history. Built with React, TypeScript, Vite, and Tailwind CSS, it features an interactive Leaflet map of 31 historically significant art locations across India.
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ src/
 │   ├── ArtistCard.tsx      — Artist directory cards
 │   └── Footer.tsx          — Site footer
 ├── data/
-│   ├── locations.ts        — 25+ art locations dataset
+│   ├── locations.ts        — 31 art locations dataset
 │   ├── artists.ts          — 10 documented artists
 │   ├── movements.ts        — 12 art movements
 │   └── artForms.ts         — Art forms & historical periods
@@ -74,11 +74,12 @@ src/
 
 ## Features
 
-- **Interactive Map** — React-Leaflet with 25+ custom art-form markers
+- **Interactive Map** — React-Leaflet with 31 colour-coded art-form markers and a live legend
 - **Search** — Debounced multi-entity search across locations, artists, movements
 - **Filters** — Region, Art Form, Historical Period, Movement
 - **Location Panels** — Full historical context, images, artists, artworks
 - **Image Gallery** — Lightbox with attribution
+- **Hero constellation** — the landing visual plots every location from its real latitude/longitude
 - **Artistic Connections** — Toggle connection lines between related locations
 - **Art Form Exploration** — Visual cards that filter the map
 - **Historical Timeline** — Interactive period cards with major developments
@@ -97,7 +98,7 @@ src/
 | Build | Vite |
 | Styling | Tailwind CSS v3 |
 | Map | React-Leaflet + Leaflet |
-| Map Tiles | CartoDB Positron (OpenStreetMap) |
+| Map Tiles | OpenStreetMap standard tiles |
 | Icons | Lucide React |
 | Fonts | Playfair Display + Inter |
 

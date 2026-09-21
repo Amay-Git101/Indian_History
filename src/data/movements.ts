@@ -11,7 +11,7 @@ export const movements: Movement[] = [
     characteristics: ['Wash painting technique', 'Soft atmospheric rendering', 'Classical Indian iconography', 'East Asian influence', 'Nationalist ideology'],
     artistIds: ['abanindranath-tagore', 'nandalal-bose', 'rabindranath-tagore', 'benode-behari-mukherjee', 'jamini-roy'],
     locationIds: ['kolkata', 'santiniketan', 'varanasi'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bharat_mata.jpg/400px-Bharat_mata.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bharat_mata.jpg?width=400',
     coverImageAlt: 'Bharat Mata by Abanindranath Tagore, c. 1905',
   },
   {
@@ -24,8 +24,8 @@ export const movements: Movement[] = [
     characteristics: ['Fine brushwork', 'Naturalistic portraiture', 'Persian compositional influence', 'Rich jewel-like colours', 'Court and nature themes'],
     artistIds: [],
     locationIds: ['delhi', 'agra', 'fatehpur-sikri'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Jahangir_preferring_a_Sufi_Shaikh_to_kings_by_Bichitr.jpg/400px-Jahangir_preferring_a_Sufi_Shaikh_to_kings_by_Bichitr.jpg',
-    coverImageAlt: 'Jahangir preferring a Sufi Sheikh to kings, Mughal miniature by Bichitr, c. 1615–1618',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/12_Abu%27l_Hasan_Jahangir_Welcoming_Shah_%27Abbas,_ca._1618,_Freer_Gallery_of_Art,_Washington_DC.jpg?width=400',
+    coverImageAlt: 'Jahangir welcoming Shah Abbas, Mughal miniature by Abu al-Hasan, c. 1618',
   },
   {
     id: 'rajput-painting',
@@ -37,8 +37,8 @@ export const movements: Movement[] = [
     characteristics: ['Bold flat colour fields', 'Strong outlines', 'Devotional Hindu themes', 'Geometric landscape conventions', 'Multiple schools (Mewar, Marwar, Bundi, Kota)'],
     artistIds: [],
     locationIds: ['jaipur', 'udaipur', 'bundi'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Krishna_lifting_Govardhan_hill.jpg/400px-Krishna_lifting_Govardhan_hill.jpg',
-    coverImageAlt: 'Krishna lifting Govardhan Hill, Rajput painting, c. 18th century',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Todi_Ragini,_Ragamala,_Bundi,_Rajasthan,_1591.jpg?width=400',
+    coverImageAlt: 'Todi Ragini, Ragamala series, Bundi school, Rajasthan, 1591',
   },
   {
     id: 'pahari-painting',
@@ -50,7 +50,7 @@ export const movements: Movement[] = [
     characteristics: ['Lyrical romantic themes', 'Kangra naturalistic style', 'Bold Basohli geometric colours', 'Fine detailed line', 'Hills and forests as settings'],
     artistIds: [],
     locationIds: ['kangra', 'manali'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lady_at_her_toilet_kangra.jpg/400px-Lady_at_her_toilet_kangra.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Radha_Krishna,_19th_century_CE,_Kangra_School_of_Art,_Museum_of_Kangra_Art,_Dharamshala.jpg?width=400',
     coverImageAlt: 'Lady at her toilet, Kangra painting, c. 18th century',
   },
   {
@@ -63,8 +63,8 @@ export const movements: Movement[] = [
     characteristics: ['International modernism', 'Cubist influence', 'Expressionist emotion', 'Abstract tendency', 'Figurative experimentation'],
     artistIds: ['mf-husain', 'tyeb-mehta'],
     locationIds: ['mumbai'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MF_Husain_painting.jpg/400px-MF_Husain_painting.jpg',
-    coverImageAlt: 'Painting by M.F. Husain, associated with the Progressive Artists\' Group',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Indrani_Rahman_with_her_portrait_%22Indrani%22_by_M._F._Husain.jpg?width=400',
+    coverImageAlt: 'Portrait by M. F. Husain, associated with the Progressive Artists\' Group',
   },
   {
     id: 'madhubani',
@@ -76,7 +76,7 @@ export const movements: Movement[] = [
     characteristics: ['Geometric patterning', 'Double outline technique', 'Natural pigments', 'Hindu devotional iconography', 'No empty spaces (horror vacui)'],
     artistIds: [],
     locationIds: ['madhubani', 'darbhanga'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Madhubani_Painting.jpg/400px-Madhubani_Painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Madhubani_Painting.jpg?width=400',
     coverImageAlt: 'Madhubani painting, Bihar',
   },
   {
@@ -89,7 +89,7 @@ export const movements: Movement[] = [
     characteristics: ['White pigment on earthen background', 'Geometric human figures', 'Circular tarpa dance motif', 'Ritual and community themes', 'Simple form vocabulary'],
     artistIds: [],
     locationIds: ['nashik', 'mumbai'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Warli_folk_painting.jpg/400px-Warli_folk_painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Painted_prayers,_Warli_paintings,_at_Sanskriti_Kendra,_Anandagram,_New_Delhi.jpg?width=400',
     coverImageAlt: 'Warli folk painting, Maharashtra',
   },
   {
@@ -102,7 +102,7 @@ export const movements: Movement[] = [
     characteristics: ['Dots and lines patterning', 'Animal and nature themes', 'Oral tradition narratives', 'Vibrant colour', 'Filling patterns within forms'],
     artistIds: [],
     locationIds: ['bhopal', 'jabalpur'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Gond_painting.jpg/400px-Gond_painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Gond_Painting.JPG?width=400',
     coverImageAlt: 'Gond tribal painting, Madhya Pradesh',
   },
   {
@@ -115,7 +115,7 @@ export const movements: Movement[] = [
     characteristics: ['Gold foil decoration', 'Rich jewel colours', 'Iconic devotional subjects', 'Stucco relief for ornaments', 'Wood panel base'],
     artistIds: [],
     locationIds: ['thanjavur'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Tanjore_painting.jpg/400px-Tanjore_painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Tanjore_painting.jpg?width=400',
     coverImageAlt: 'Tanjore painting depicting a deity',
   },
   {
@@ -128,7 +128,7 @@ export const movements: Movement[] = [
     characteristics: ['Cloth painting', 'Natural pigments and lac border', 'Precise outline', 'Narrative scroll format', 'Jagannath iconography'],
     artistIds: [],
     locationIds: ['puri', 'kolkata'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Pattachitra_painting.jpg/400px-Pattachitra_painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pattachitra_painting.jpg?width=400',
     coverImageAlt: 'Odisha Pattachitra painting',
   },
   {
@@ -141,7 +141,7 @@ export const movements: Movement[] = [
     characteristics: ['Lost-wax bronze casting', 'Idealised human anatomy', 'Graceful gesture and rhythm', 'Flame aureole iconography', 'Processional and temple use'],
     artistIds: [],
     locationIds: ['thanjavur', 'chidambaram', 'darasuram'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiva_Nataraja_Musee_Guimet_25971.jpg/400px-Shiva_Nataraja_Musee_Guimet_25971.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Shiva_Nataraja_Mus%C3%A9e_Guimet_25971.jpg?width=400',
     coverImageAlt: 'Chola bronze Nataraja, c. 10th–11th century',
   },
   {
@@ -154,7 +154,7 @@ export const movements: Movement[] = [
     characteristics: ['Natural dye process', 'Narrative mythological scenes', 'Fine pen outline (kalam = pen)', 'Tamarind-treated cloth', 'Two distinct regional traditions'],
     artistIds: [],
     locationIds: ['srikalahasti', 'machilipatnam'],
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Kalamkari.jpg/400px-Kalamkari.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Kalamkari.jpg?width=400',
     coverImageAlt: 'Kalamkari textile, Andhra Pradesh',
   },
 ];

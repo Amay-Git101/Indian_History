@@ -23,6 +23,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Keep anchored sections clear of the sticky navbar */
+  #map, #artforms, #timeline, #movements, #artists, #about-section {
+    scroll-margin-top: 4rem;
+  }
+
   h1, h2, h3, h4, h5 {
     @apply font-serif;
     letter-spacing: -0.01em;

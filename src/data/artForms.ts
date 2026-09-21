@@ -6,7 +6,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Painting',
     description:
       'From Mughal miniatures to Bengal School wash paintings and modernist canvases, Indian painting encompasses a vast spectrum of techniques, traditions, and regional schools spanning over two millennia.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bharat_mata.jpg/400px-Bharat_mata.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bharat_mata.jpg?width=400',
     coverImageAlt: 'Bharat Mata by Abanindranath Tagore, Bengal School',
   },
   {
@@ -14,7 +14,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Sculpture',
     description:
       'Indian sculpture encompasses some of the world\'s finest works in stone and bronze — from Indus Valley terracottas to Gupta-era Buddhist masterpieces, Chola bronzes, and Hoysala stone carvings.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Shiva_Nataraja_Musee_Guimet_25971.jpg/400px-Shiva_Nataraja_Musee_Guimet_25971.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Shiva_Nataraja_Mus%C3%A9e_Guimet_25971.jpg?width=400',
     coverImageAlt: 'Chola Nataraja bronze',
   },
   {
@@ -22,7 +22,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Architecture',
     description:
       'Indian temple, mosque, and stupa architecture spans multiple regional traditions — Nagara in the north, Dravidian in the south, Vesara in the Deccan — alongside Mughal garden architecture and Buddhist rock-cut monuments.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hampi_virupaksha_temple.jpg/400px-Hampi_virupaksha_temple.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Hampi_virupaksha_temple.jpg?width=400',
     coverImageAlt: 'Virupaksha Temple at Hampi',
   },
   {
@@ -30,7 +30,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Textiles',
     description:
       'India\'s textile traditions are among the richest in the world, encompassing silk weaving (Varanasi, Kanchipuram), resist-dyeing (Bandhani, Batik), embroidery (Chikankari, Kashmiri), and block printing (Sanganer, Bagru).',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Kanchipuram_silk.jpg/400px-Kanchipuram_silk.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Silk_Sari_Weaving_at_Kanchipuram,_Tamil_Nadu.jpg?width=400',
     coverImageAlt: 'Kanchipuram silk saree, Tamil Nadu',
   },
   {
@@ -38,7 +38,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Folk Art',
     description:
       'India\'s folk art traditions are strikingly diverse and geographically rooted — Madhubani from Bihar, Pattachitra from Odisha, Phad from Rajasthan, Kalamkari from Andhra, each with distinct formal conventions and ritual contexts.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Madhubani_Painting.jpg/400px-Madhubani_Painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Madhubani_Painting.jpg?width=400',
     coverImageAlt: 'Madhubani painting, Bihar',
   },
   {
@@ -46,7 +46,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Tribal Art',
     description:
       'The tribal communities of India have developed rich visual traditions — Gond, Warli, Bhil, Sora — that express cosmological narratives, ecological relationships, and ritual life through distinctive abstract and geometric vocabularies.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Warli_folk_painting.jpg/400px-Warli_folk_painting.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Painted_prayers,_Warli_paintings,_at_Sanskriti_Kendra,_Anandagram,_New_Delhi.jpg?width=400',
     coverImageAlt: 'Warli painting, Maharashtra',
   },
   {
@@ -54,7 +54,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Craft',
     description:
       'Traditional Indian crafts range from Bidriware metalwork of Bidar, to Zardozi embroidery of Lucknow, to blue pottery of Jaipur and Dhokra casting of tribal regions — each craft tradition tied to specific communities and geographies.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bidriware.jpg/400px-Bidriware.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Bidriware.jpg?width=400',
     coverImageAlt: 'Bidriware metalwork, Karnataka',
   },
   {
@@ -62,15 +62,15 @@ export const artForms: ArtFormInfo[] = [
     name: 'Modern Art',
     description:
       'Modern Indian art emerged from colonial-era academic painting schools, the Bengal School, and culminated in post-independence movements like the Progressive Artists\' Group, which engaged with international modernism while maintaining Indian sensibilities.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MF_Husain.jpg/400px-MF_Husain.jpg',
-    coverImageAlt: 'M.F. Husain',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Indrani_Rahman_with_her_portrait_%22Indrani%22_by_M._F._Husain.jpg?width=400',
+    coverImageAlt: 'Indrani Rahman with her portrait by M. F. Husain',
   },
   {
     id: 'Religious Art',
     name: 'Religious Art',
     description:
       'Spanning Hindu, Buddhist, Jain, Islamic, Sikh, and Christian traditions, Indian religious art encompasses some of the most profound visual expressions in world art history — from Ajanta\'s Buddhist murals to the devotional bronzes of Tamil Nadu.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Ajanta_Padmapani.jpg/400px-Ajanta_Padmapani.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ajanta_Padmapani.jpg?width=400',
     coverImageAlt: 'Padmapani Bodhisattva fresco, Ajanta Caves',
   },
   {
@@ -78,7 +78,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Classical Art',
     description:
       'The classical period of Indian art, roughly spanning from the Mauryan era to the Gupta and Pallava periods, produced canonical works in sculpture and painting that established aesthetic norms referenced throughout subsequent Indian art history.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sanchi1_N-MP-220.jpg/400px-Sanchi1_N-MP-220.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sanchi1_N-MP-220.jpg?width=400',
     coverImageAlt: 'Great Stupa at Sanchi, Madhya Pradesh',
   },
   {
@@ -86,7 +86,7 @@ export const artForms: ArtFormInfo[] = [
     name: 'Contemporary Art',
     description:
       'Contemporary Indian art engages with global dialogue while drawing on local traditions — through installation, video, photography, and performance — with major centres in Mumbai, Delhi, and Baroda.',
-    coverImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/National_Gallery_of_Modern_Art_New_Delhi.jpg/400px-National_Gallery_of_Modern_Art_New_Delhi.jpg',
+    coverImage: 'https://commons.wikimedia.org/wiki/Special:FilePath/National_Gallery_of_Modern_Art_(NGMA),_New_Delhi_(1).jpg?width=400',
     coverImageAlt: 'National Gallery of Modern Art, New Delhi',
   },
 ];

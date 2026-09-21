@@ -12,7 +12,7 @@ export const artists: Artist[] = [
       'Nobel laureate poet, philosopher, and painter who developed a highly distinctive visual style blending multiple Asian traditions. His paintings are characterised by expressive lines and a dreamlike quality.',
     notableWorks: ['Rabindra Chitravali (collected paintings)', 'Self-Portrait series', 'Face studies (c. 1928–1941)'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Rabindranath_Tagore_in_1909.jpg/440px-Rabindranath_Tagore_in_1909.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Rabindranath_Tagore_in_1909.jpg?width=440',
     portraitAlt: 'Rabindranath Tagore, photograph c. 1909',
   },
   {
@@ -26,8 +26,8 @@ export const artists: Artist[] = [
       'One of the pioneering figures of modern Indian art, Nandalal Bose was closely associated with the Bengal School and with Santiniketan. He was deeply influenced by Indian classical traditions and worked in a range of media including wash paintings and woodcuts.',
     notableWorks: ['Haripura Posters (1938)', 'Sati (c. 1907)', 'Ardhanarishvara'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nandalal_Bose.jpg/440px-Nandalal_Bose.jpg',
-    portraitAlt: 'Nandalal Bose, photograph',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Nandalal_Bose_1967_stamp_of_India.jpg?width=440',
+    portraitAlt: 'Nandalal Bose on an Indian commemorative stamp',
   },
   {
     id: 'amrita-sher-gil',
@@ -40,7 +40,7 @@ export const artists: Artist[] = [
       'Regarded as one of the greatest avant-garde artists of early 20th-century India, Amrita Sher-Gil combined Post-Impressionist techniques with Indian subject matter. Her works often depicted ordinary Indian village life and women.',
     notableWorks: ['Three Girls (1935)', 'Village Scene (1938)', 'Bride\'s Toilet (1937)', 'Hungarian Gypsy Girl (1932)'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Amrita_Sher-Gil.jpg/440px-Amrita_Sher-Gil.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Amrita_Sher-Gil.jpg?width=440',
     portraitAlt: 'Amrita Sher-Gil, self-portrait',
   },
   {
@@ -54,7 +54,7 @@ export const artists: Artist[] = [
       'A pioneering painter from Kerala who successfully integrated European academic techniques with Indian iconographic traditions. His works depicting mythological subjects and elegant Indian women became widely known through oleographic prints.',
     notableWorks: ['There Comes Papa (1893)', 'Galaxy of Musicians', 'Shakuntala', 'Saraswati'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Raja_Ravi_Varma%2C_self-portrait.jpg/440px-Raja_Ravi_Varma%2C_self-portrait.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Self_portrait_by_Raja_Ravi_Varma.jpg?width=440',
     portraitAlt: 'Raja Ravi Varma, self-portrait',
   },
   {
@@ -68,7 +68,7 @@ export const artists: Artist[] = [
       'A founder of the Bengal School of Art, Abanindranath Tagore sought to revive classical Indian aesthetics against the dominance of Western academic painting. He developed a lyrical, atmospheric style drawing from Mughal miniature painting and Japanese wash painting techniques.',
     notableWorks: ['Bharat Mata (c. 1905)', 'Arabian Nights series', 'Shah Jahan\'s Last Days'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Abanindranath_Tagore.jpg/440px-Abanindranath_Tagore.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Abanindranath_Tagore.jpg?width=440',
     portraitAlt: 'Abanindranath Tagore',
   },
   {
@@ -82,8 +82,8 @@ export const artists: Artist[] = [
       'Jamini Roy turned away from Western academic painting to draw inspiration from Bengali folk art, particularly the Kalighat tradition. His mature work is characterised by bold, flat outlines, earth pigments, and simplified forms.',
     notableWorks: ['Christ (series)', 'Santhal Women', 'Cat with Prawn', 'Mother and Child'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Jamini_Roy.jpg/440px-Jamini_Roy.jpg',
-    portraitAlt: 'Jamini Roy',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_Jamini_Roy.jpg?width=440',
+    portraitAlt: 'Statue of Jamini Roy',
   },
   {
     id: 'mf-husain',
@@ -96,8 +96,8 @@ export const artists: Artist[] = [
       'Maqbool Fida Husain was one of the most celebrated Indian painters of the 20th century, often described as the "Picasso of India." A founding member of the Progressive Artists\' Group, his work encompassed Indian mythology, folk themes, and contemporary subjects.',
     notableWorks: ['Zameen (1955)', 'Ganga series', 'Horses series', 'Mother Teresa (1988)'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/MF_Husain.jpg/440px-MF_Husain.jpg',
-    portraitAlt: 'M. F. Husain, photograph',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Indrani_Rahman_with_her_portrait_%22Indrani%22_by_M._F._Husain.jpg?width=440',
+    portraitAlt: 'Indrani Rahman with her portrait by M. F. Husain',
   },
   {
     id: 'ramkinkar-baij',
@@ -110,8 +110,8 @@ export const artists: Artist[] = [
       'A pioneering sculptor and painter associated with Santiniketan, Ramkinkar Baij developed a distinctive modernist idiom that drew from tribal and folk sources. His monumental works in cement and stone remain landmark achievements in Indian sculpture.',
     notableWorks: ['Sujata (1937)', 'Santhal Family (1938)', 'Mill Call (1956)', 'Yaksha-Yakshi'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Ramkinkar_Baij_at_work.jpg/440px-Ramkinkar_Baij_at_work.jpg',
-    portraitAlt: 'Ramkinkar Baij at work',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Santhal_Family_by_Ramkinkar_Baij_01.jpg?width=440',
+    portraitAlt: 'Santhal Family, sculpture by Ramkinkar Baij',
   },
   {
     id: 'tyeb-mehta',
@@ -124,7 +124,7 @@ export const artists: Artist[] = [
       'One of the most distinguished members of the Progressive Artists\' Group, Tyeb Mehta developed a powerful figurative style marked by bold diagonal compositions and intense emotional charge. His works often engage with themes of pain, sacrifice, and the human condition.',
     notableWorks: ['Mahishasura (1996)', 'Falling Figure (1963)', 'Diagonal (series)'],
     portraitUrl:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Tyeb_Mehta.jpg/440px-Tyeb_Mehta.jpg',
+      'https://commons.wikimedia.org/wiki/Special:FilePath/Tyeb_Mehta.jpg?width=440',
     portraitAlt: 'Tyeb Mehta',
   },
   {

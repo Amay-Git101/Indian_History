@@ -122,6 +122,8 @@ const MapView: React.FC<MapViewProps> = ({
     }
   }
 
+  const legendForms = Array.from(new Set(locations.map((l) => l.artForms[0] ?? 'Painting')));
+
   return (
     <div className="relative w-full h-full map-wrapper" id="map-section">
       <MapContainer
@@ -131,12 +133,11 @@ const MapView: React.FC<MapViewProps> = ({
         zoomControl={false}
         aria-label="Interactive map of Indian art locations"
       >
-        {/* Map tiles — CartoDB Positron (clean light style) */}
+        {/* Map tiles — OpenStreetMap standard (no API key required) */}
         <TileLayer
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           maxZoom={18}
-          subdomains="abcd"
         />
 
         {/* Custom zoom control */}
@@ -236,6 +237,30 @@ const MapView: React.FC<MapViewProps> = ({
           {connectionsEnabled ? 'Hide Connections' : 'Show Connections'}
         </button>
       </div>
+
+      {/* Legend — art forms present in the current view */}
+      {legendForms.length > 0 && (
+        <div
+          className="absolute top-4 right-4 z-[900] hidden sm:block bg-white/95 border border-charcoal-200 rounded-sm shadow px-3 py-2"
+          aria-label="Map legend"
+        >
+          <p className="text-[10px] font-sans font-semibold tracking-widest uppercase text-charcoal-400 mb-1.5">
+            Primary art form
+          </p>
+          <ul className="space-y-1">
+            {legendForms.map((af) => (
+              <li key={af} className="flex items-center gap-2 text-xs font-sans text-charcoal-700">
+                <span
+                  className="inline-block w-2.5 h-2.5 rounded-full"
+                  style={{ backgroundColor: artFormColor(af) }}
+                  aria-hidden="true"
+                />
+                {af}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Empty state */}
       {locations.length === 0 && (
